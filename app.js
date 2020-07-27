@@ -4,6 +4,7 @@ const path = require('path');
 
 const port = 3000;
 const app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 
 const indexRoute = require('./routes/index');
 const curriculoRoutes = require('./routes/curriculo-routes');
